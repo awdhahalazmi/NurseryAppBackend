@@ -30,6 +30,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public static final String ADMIN_CASE_PATH= "/api/v1/cases/admin/add_case/**";
     public static final String USER_CASE_PATH= "/api/v1/cases/get_case/**";
    public static final String USER_AREA_PATH= "/api/v1/area/**";
+   public static final String USER_NURSERY_PATH= "/api/v1/nurseries/**";
+    public static final String ADMIN_NURSERY_PATH= "/api/v1/nurseries/admin/add_nursery/**";
+    public static final String USER_ENROLLMENT_PATH= "/api/v1/enroll/**";
+
+
 //    public static final String CHAPTER_PATH= "/api/v1/chapter/**";
 //    public static final String Lesson_PATH= "/api/v1/lesson/**";
 //    public static final String PROGRESS_PATH= "/api/v1/progress/**";
@@ -68,6 +73,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(USER_AREA_PATH).hasAuthority("user")
                 .antMatchers(ADMIN_CASE_PATH).hasAuthority("admin")
                 .antMatchers(USER_CASE_PATH).hasAuthority("user")
+                .antMatchers(ADMIN_NURSERY_PATH).hasAuthority("admin")
+                .antMatchers(USER_NURSERY_PATH).hasAuthority("user")
+                .antMatchers(USER_ENROLLMENT_PATH).hasAuthority("user")
 //                .antMatchers(ADMIN_QUESTION_PATH).hasAuthority("admin")
 //                .antMatchers(USER_QUESTION_PATH).hasAuthority("user")
 //                .antMatchers(PROGRESS_PATH).hasAuthority("user")

@@ -85,4 +85,12 @@ public class NurseryEntity {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public AreaEntity getAreaId() {
+        return areaId;
+    }
+
+    public void setAreaId(AreaEntity areaId) {
+        this.areaId = areaId;
+    }
 }

@@ -23,10 +23,9 @@ public class EnrollmentEntity {
     @JoinColumn(name = "user_id")
     private UserEntity userId;
 
-    @ManyToOne
+     @ManyToOne
     @JoinColumn(name = "nursery_id")
     private NurseryEntity nurseryId;
-
     public NurseryEntity getNurseryId() {
         return nurseryId;
     }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class AreaServiceImpl implements AreaService{
+public class AreaServiceImpl implements AreaService {
 
     private final AreaRepository areaRepository;
 
@@ -28,10 +28,6 @@ public class AreaServiceImpl implements AreaService{
             throw new IllegalArgumentException("Area name cannot be empty");
         }
 
-
         return areaRepository.save(area);
     }
-    }
-
-
-
+}
